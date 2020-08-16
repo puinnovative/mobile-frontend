@@ -148,7 +148,7 @@
 		color: gray; 
 		font-size: 16px; 
 		position: relative; 
-		left: 270px; 
+		left: 265px; 
 	}
 	.bottom {
 		background-color: #CCCCCC; 

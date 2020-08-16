@@ -2804,7 +2804,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.container {\n\toverflow-x: hidden;\n}\n.chatU {\n\tmargin: 20px 0;\n}\n.imgL {\n\tfloat: left; \n\twidth: 60px; \n\theight: 60px; \n\tbackground-color: #eeeeee; \n\tborder-radius: 50%;\n}\n.imgR {\n\tfloat: right; \n\twidth: 60px; \n\theight: 60px; \n\tbackground-color: #eeeeee; \n\tborder-radius: 50%;\n}\n.text {\n\tcolor: gray; \n\tfont-size: 16px; \n\tposition: relative; \n\tleft: 20px; \n\ttop: 5px;\n\tdisplay: block;\n}\n.text2 {\n\tcolor: gray; \n\tfont-size: 16px; \n\tposition: relative; \n\tleft: 270px;\n}\n.bottom {\n\tbackground-color: #CCCCCC; \n\twidth: 100vw; \n\theight: 60px; \n\tposition: fixed;\n\tbottom: 0;\n}\n", ""]);
+exports.push([module.i, "\n.container {\n\toverflow-x: hidden;\n}\n.chatU {\n\tmargin: 20px 0;\n}\n.imgL {\n\tfloat: left; \n\twidth: 60px; \n\theight: 60px; \n\tbackground-color: #eeeeee; \n\tborder-radius: 50%;\n}\n.imgR {\n\tfloat: right; \n\twidth: 60px; \n\theight: 60px; \n\tbackground-color: #eeeeee; \n\tborder-radius: 50%;\n}\n.text {\n\tcolor: gray; \n\tfont-size: 16px; \n\tposition: relative; \n\tleft: 20px; \n\ttop: 5px;\n\tdisplay: block;\n}\n.text2 {\n\tcolor: gray; \n\tfont-size: 16px; \n\tposition: relative; \n\tleft: 265px;\n}\n.bottom {\n\tbackground-color: #CCCCCC; \n\twidth: 100vw; \n\theight: 60px; \n\tposition: fixed;\n\tbottom: 0;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
