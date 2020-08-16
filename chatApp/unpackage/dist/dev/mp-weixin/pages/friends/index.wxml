@@ -1,0 +1,1 @@
+<view class="container"><uni-indexed-list vue-id="da7bba92-1" options="{{list}}" showSelect="{{false}}" data-event-opts="{{[['^click',[['switchTo']]]]}}" bind:click="__e" bind:__l="__l"></uni-indexed-list></view>

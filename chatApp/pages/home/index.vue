@@ -1,9 +1,9 @@
 <template>
-	<view style="margin: 10px 0;">
-		<image style="width: 100px; height: 100px; background-color: #eeeeee; border-radius: 50%; margin: 0 40%" src="../../static/imgs/my.png"></image>
-		<input class="uni-input" @input="setUserInfo" :value="name" style="color: #2C405A; font-size: 20px; margin-top: 10px; text-align:center;"/>
-		<button @tap="reSetUserInf" class="mini-btn" type="warn" size="mini" style="margin: 20px auto; width: 90px; display: block;">更新资料</button>
-		<button @tap="switchTo" class="mini-btn" type="warn" size="mini" style="margin: 20px auto; width: 90px; display: block;">Sign out</button>
+	<view style="margin: 10px 0; overflow: hidden;">
+		<image class="img" src="../../static/imgs/my.png"></image>
+		<input @input="setUserInfo" :value="name" />
+		<button @tap="resetUserInfo" class="mini-btn" type="warn" size="mini" style="margin: 20px auto; width: 90px; display: block;">更新资料</button>
+		<button @tap="signOut" class="mini-btn" type="warn" size="mini" style="margin: 20px auto; width: 90px; display: block;">Sign out</button>
 	</view>
 </template>
 
@@ -21,13 +21,13 @@
 			getUserInfo() {
 				let that = this
 				uni.getStorage({
-				    key: 'user_name',
+				    key: 'userInfo',
 				    success: function (res) {
-				        that.name = res.data
+				        that.name = res.data.user_name
 				    }
 				});
 			},
-			reSetUserInf() {
+			resetUserInfo() {
 				uni.setStorage({
 					key: 'user_name',
 					data: this.name
@@ -40,14 +40,33 @@
 			setUserInfo(e) {
 				this.name = e.detail.value;
 			},
-			switchTo() {
-				   uni.reLaunch({
-							url: '/pages/login/index',
-					});
+			signOut() {
+					uni.removeStorage({
+						key: "userInfo",
+						success: function() {
+							uni.reLaunch({
+								url: '/pages/login/index',
+							});
+						}
+					})
+
 			}
 		}
 	}
 </script>
 
 <style>
+	.img {
+		width: 100px; 
+		height: 100px; 
+		background-color: #eeeeee; 
+		border-radius: 50%; 
+		margin: 0 40%
+	}
+	input {
+		color: #2C405A; 
+		font-size: 20px; 
+		margin-top: 10px; 
+		text-align:center;
+	}
 </style>

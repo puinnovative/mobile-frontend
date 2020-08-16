@@ -1,0 +1,26 @@
+
+.container {
+	overflow-x: hidden;
+}
+.text {
+	color: gray; 
+	font-size: 16px; 
+	position: relative; 
+	left: 20px; 
+	top: 5px;
+	display: block;
+}
+.text2 {
+	color: gray; 
+	font-size: 16px; 
+	position: relative; 
+	left: 270px;
+}
+.bottom {
+	background-color: #CCCCCC; 
+	width: 100vw; 
+	height: 60px; 
+	position: fixed;
+	bottom: 0;
+}
+

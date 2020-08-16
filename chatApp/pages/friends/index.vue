@@ -1,11 +1,6 @@
 <template>
-	<view class="container">
-			<view v-for="item in chatGuy" :key="item.id" style="margin: 10px 0;">
-				<image style="width: 60px; height: 60px; background-color: #eeeeee; border-radius: 50%;" :src="item.avatar"></image>
-				<text style="position: relative; bottom: 40px; color: gray; font-size: 16px;" class="text">{{item.name}}</text>
-				<button @tap="switchTo" class="mini-btn" type="warn" size="mini" style="float: right; margin: 20px 0; width: 90px" :disabled="item.offline">{{item.status ? "开始聊天" : "不在线"}}</button>
-				<image style="width: 100%; height: 12px; display: block;" src="../../static/imgs/line.png"></image>
-			</view>
+	<view>
+		<uni-indexed-list :options="list" @click="goToChat"></uni-indexed-list>
 	</view>
 
 </template>
@@ -14,36 +9,49 @@
 	export default {
 		data() {
 			return {
-				chatGuy: [
-					{
-						name: "张三",
-						avatar: "../../static/imgs/guy.png",
-						id: "1",
-						offline: false,
-						status: 1
-					},
-					{
-						name: "李四",
-						avatar: "../../static/imgs/guy2.png",
-						id: "2",
-						offline: true,
-						status: 0
-					},
-					{
-						name: "王五",
-						avatar: "../../static/imgs/guy3.png",
-						id: "3",
-						offline: true,
-						status: 0
-					},
-				]
+				list: [
+							{
+								"letter": "C",
+								"data": ["曹操", "曹冲", "曹丕", "曹植"]
+							}, 
+							{
+								"letter": "D",
+								"data": ["段誉", "断手", "断指", "短腿"]
+							},
+							{
+								"letter": "G",
+								"data": ["高人", "高数", "高参", "高级"]
+							},
+							{
+								"letter": "W",
+								"data": ["王石", "王林", "王毅", "王五"]
+							},
+							{
+								"letter": "X",
+								"data": ["吸热", "袭人", "洗洗", "洗吧"]
+							},{
+								"letter": "Y",
+								"data": ["杨修", "杨科", "杨坤", "央财"]
+							},
+							{
+								"letter": "Z",
+								"data": ["账户", "张科", "掌机", "张三"]
+							}
+						]
 			}
 		},
 		methods: {
-			switchTo() {
-				   uni.navigateTo({
-							url: '/pages/one2one/index',
-					});
+			
+			goToChat(e) {
+				uni.getStorage({
+					key: "recentChat",
+					success: function(res) {
+						uni.navigateTo({
+								url: '/pages/chat/index?chatWith=' + e.item.name + '&id=' + (res.data.length + 1),
+						});
+					}
+				})
+
 			}
 		}
 	}

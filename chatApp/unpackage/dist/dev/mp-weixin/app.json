@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/chat/index",
+    "pages/friends/index",
+    "pages/home/index",
+    "pages/one2one/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#007AFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#55ffff",
+    "borderStyle": "black",
+    "backgroundColor": "#0055ff",
+    "list": [
+      {
+        "pagePath": "pages/chat/index",
+        "iconPath": "static/icon/chat.png",
+        "selectedIconPath": "static/icon/chatl.png",
+        "text": "最近"
+      },
+      {
+        "pagePath": "pages/friends/index",
+        "iconPath": "static/icon/friends.png",
+        "selectedIconPath": "static/icon/friendsl.png",
+        "text": "好友"
+      },
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/homel.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

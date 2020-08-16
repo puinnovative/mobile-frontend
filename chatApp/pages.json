@@ -3,31 +3,31 @@
 		{
 			"path": "pages/login/index",
 			"style": {
-				"navigationBarTitleText": "登录页"
+				"navigationBarTitleText": ""
 			}
 		},
 		{
-			"path": "pages/chat/index",
+			"path": "pages/recent/index",
 			"style": {
-				"navigationBarTitleText": "聊天"
+				"navigationBarTitleText": "recent"
 			}
 		},
 		{
 			"path": "pages/friends/index",
 			"style": {
-				"navigationBarTitleText": "好友录"
+				"navigationBarTitleText": "friends"
 			}
 		},
 		{
 			"path": "pages/home/index",
 			"style": {
-				"navigationBarTitleText": "个人设置"
+				"navigationBarTitleText": "myProfile"
 			}
 		},
 		{
-			"path": "pages/one2one/index",
+			"path": "pages/chat/index",
 			"style": {
-				"navigationBarTitleText": "对话"
+				"navigationBarTitleText": "chating"
 			}
 		}
 	],
@@ -38,16 +38,16 @@
 		"backgroundColor": "#FFFFFF"
 	},
 	"tabBar": {
-	        "color": "#cdcdcd",
-	        "selectedColor": "#39cffc",
+	        "color": "#ffffff",
+	        "selectedColor": "#55ffff",
 	        "borderStyle": "black",
-	        "backgroundColor": "#ffffff",
+	        "backgroundColor": "#0055ff",
 	        "list": [
 				{
-	                "pagePath": "pages/chat/index",
+	                "pagePath": "pages/recent/index",
 	                "iconPath": "static/icon/chat.png",
 	                "selectedIconPath": "static/icon/chatl.png",
-	                "text": "聊天"
+	                "text": "最近"
 	            }, 
 				{
 	                "pagePath": "pages/friends/index",

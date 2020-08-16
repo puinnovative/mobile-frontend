@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "friends",
+  "usingComponents": {
+    "uni-indexed-list": "/components/uni-indexed-list/uni-indexed-list"
+  }
+}

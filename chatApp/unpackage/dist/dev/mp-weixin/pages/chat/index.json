@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "recent",
+  "usingComponents": {
+    "uni-badge": "/components/uni-badge/uni-badge"
+  }
+}

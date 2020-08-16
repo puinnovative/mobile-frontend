@@ -1,8 +1,9 @@
 <template>
-	<view style="margin: 10px 0;">
-		<text style="display: block; text-align:center; font-size: 40px; margin: 20px 0;">welcome to the chatroom !</text>
-		<input :value="name" @input="setUserInfo" placeholder="给自己取个名字" class="uni-input" style="color: #2C405A; font-size: 20px; margin-top: 10px; text-align:center;"/>
-		<button class="mini-btn" type="warn" size="mini" style="margin: 20px auto; width: 90px; display: block;" @tap="switchTo">login In</button>
+	<view class="container">
+		<text class="slogan">Link  the world~</text>
+		<input v-model="userInfo.user_name" placeholder="请输入诨号"/>
+		
+		<button class="mini-btn" @tap="switchTo">登录</button>
 	</view>
 </template>
 
@@ -10,25 +11,58 @@
 	export default {
 		data() {
 			return {
-				name: ""
+				userInfo: {
+					user_name: ""
+				}
+
 			}
 		},
 		methods: {
 			switchTo() {
 					uni.setStorage({
-						key: 'user_name',
-						data: this.name
+						key: 'userInfo',
+						data: this.userInfo
 					});
 				   uni.switchTab({
-							url: '/pages/chat/index',
+							url: '/pages/recent/index',
 					});
 			},
-			setUserInfo(e) {
-				this.name = e.detail.value;
-			}
 		}
 	}
 </script>
 
 <style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.container {
+		background-image: url(../../static/imgs/bgc.jpg);
+		height: 100vh;
+		overflow: hidden;
+	}
+	.slogan {
+		display: block; 
+		text-align:center; 
+		font-size: 46px; 
+		margin: 20px 70px 80px 70px;
+		color: #007AFF;
+	}
+	input {
+		display: block;
+		color: #2C405A; 
+		font-size: 20px; 
+		margin: 0 auto;
+		text-align: start;
+		margin-top: 20px; 
+		background-color: white;
+		border: 1px solid #C0C0C0;
+		height: 40px;
+		width: 250px;
+	}
+	button {
+		margin: 20px auto; 
+		width: 90px; 
+		display: block;
+	}
 </style>
